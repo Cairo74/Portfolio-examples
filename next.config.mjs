@@ -22,6 +22,8 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/Portfolio-examples' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Portfolio-examples/' : '',
 }
 
 mergeConfig(nextConfig, userConfig)
